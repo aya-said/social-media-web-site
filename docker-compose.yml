@@ -9,7 +9,7 @@ services:
       - devops-network
   server:
     build: ./server
-    container_name: server
+    container_name: back
     ports:
       - "9000:9000"
     networks:
@@ -23,7 +23,7 @@ services:
   # Service pour le client frontend (React)
   client:
     build: ./client
-    container_name: client
+    container_name: front
     ports:
       - "3000:3000"
     networks:
